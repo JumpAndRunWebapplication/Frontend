@@ -1,0 +1,16 @@
+<div class="headbanner">
+
+  <div class="headitem img"><img src="assets/images/logo.PNG" height="60px"> </div>
+    <div class="headitem gamename"> Run & Jump </div>
+
+  <div>
+    <div class="headitem logout" *ngIf="isLoggedIn">
+      <img src="assets/images/logout.png" height="40px" (click)="goToLoginPage()">
+    </div>
+
+    <div class="headitem user" *ngIf="isLoggedIn">
+      <img src="assets/images/user.png" height="60px">{{user.username}}
+    </div>
+  </div>
+
+</div>

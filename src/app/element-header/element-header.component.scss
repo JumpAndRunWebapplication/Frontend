@@ -1,0 +1,71 @@
+.headbanner{
+  background-color: #6fa11a;
+  width: 100%;
+  height: 120px;
+  border-bottom:  #515151 2px solid;
+}
+
+.headitem{
+  height: 70px;
+  padding: 2px;
+  margin: 20px;
+  display: inline-block;
+
+}
+
+
+.img{
+  width: 70px;
+
+  float: left;
+
+  background-color: #ddb694;
+  border: #515151 2px solid;
+  border-radius: 100%;
+
+  text-align: center;
+}
+
+
+.gamename{
+  width: 270px;
+
+  float: left;
+
+  font-family: "Gloria Hallelujah";
+  font-size: 44px;
+  color: #fff;
+  letter-spacing: -0.6px;
+  text-shadow: 0 0 5px black;
+
+}
+
+.user{
+  width: 200px;
+padding-left: 10px;
+  float: right;
+
+  background-color: #ddb694;
+  border: #515151 2px solid;
+  border-radius: 15px;
+
+  text-align: left;
+}
+
+.user a{
+  font-family: "Gloria Hallelujah";
+  font-size: 16px;
+}
+
+
+.logout{
+  width: 70px;
+padding-top: 12px;
+  float: right;
+
+  background-color: #ddb694;
+  border: #515151 2px solid;
+  border-radius: 15px;
+
+  text-align: center;
+}

@@ -1,0 +1,24 @@
+<div class="whitepanel" >
+  <form #loginForm="ngForm">
+    <small class="text-danger">{{errorMessage}}</small>
+    <div class="form-group">
+      <label for="inputUsername">Username</label>
+      <input type="username" class="form-control" id="inputUsername" aria-describedby="usernameHelp"
+             placeholder="Enter username" name="username" [(ngModel)]="user.username"
+             required #username="ngModel" [class.is-invalid]="username.invalid && username.touched">
+      <small id="usernameHelp" class="form-text text-muted">Please enter your username.</small>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword">Password</label>
+      <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password"
+             [(ngModel)]="user.password" required #password="ngModel" [class.is-invalid]="password.invalid && password.touched">
+      <small id="passwordHelp" class="form-text text-muted">Please enter your password.</small>
+    </div>
+    <br>
+    <div class="form-group to-right">
+      <button type="login" class="btn c-green" [disabled]="username.invalid || password.invalid" (click)="loginUser()">Login</button>
+      <a class="col-md-1"></a>
+      <button type="register" class="btn c-gray float-end" (click)="goToRegistrationPage()">Register</button>
+    </div>
+  </form>
+</div>

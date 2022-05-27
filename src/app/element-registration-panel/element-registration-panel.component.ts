@@ -18,6 +18,10 @@ export class ElementRegistrationPanelComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * Calls registerUser Method from UsermangementService;
+   * Navigates to "login"-webpage after successful registration
+   */
   registerUser() {
     this.registrationService.registerUser(this.user).subscribe(
       data => {
@@ -29,6 +33,9 @@ export class ElementRegistrationPanelComponent implements OnInit {
     );
   }
 
+  /**
+   * navigates to "login"-webpage
+   */
   goToLoginPage() {
     this.router.navigate(['/login'])
   }

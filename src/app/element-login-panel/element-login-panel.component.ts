@@ -20,6 +20,10 @@ export class ElementLoginPanelComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * Calls loginUser method of UsermangementService;
+   * saves JWT from response in localStorage as a header;
+   */
   loginUser() {
     this.service.loginUser(this.user).subscribe(
       data => {

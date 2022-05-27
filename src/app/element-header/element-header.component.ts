@@ -12,7 +12,6 @@ import {UserRegistration} from "../model/user-registration";
 
 export class ElementHeaderComponent implements OnInit {
 
-  isUser = 5;
   @Input() isLoggedIn!: boolean;
   user = new UserRegistration();
 
@@ -24,16 +23,22 @@ export class ElementHeaderComponent implements OnInit {
     }
   }
 
+  /**
+   * removes Authorization JWT from localStorage
+   */
   goToLoginPage() {
     localStorage.removeItem('Authorization');
     this.router.navigate(['/login'])
+    document.location.reload();
   }
 
+  /**
+   * fetches User
+   * Console.Log "Error" if user is not found or other problems occur during the fetch process
+   */
   getUser() {
     this.service.getUser().subscribe(
       data => {
-        console.log('works');
-        console.log(data);
         this.user = data;
       },
       error => {

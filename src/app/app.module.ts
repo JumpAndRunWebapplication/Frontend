@@ -25,7 +25,7 @@ import {AuthInterceptor} from "./service/AuthInterceptor";
     ElementLoginPanelComponent,
     ElementBodyComponent,
     ElementRegistrationPanelComponent,
-    ElementCanvasComponent,
+    ElementCanvasComponent
   ],
     imports: [
         BrowserModule,

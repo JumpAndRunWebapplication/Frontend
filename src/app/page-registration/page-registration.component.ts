@@ -10,27 +10,8 @@ import {UsermanagementService} from "../service/usermanagement.service";
 })
 export class PageRegistrationComponent implements OnInit {
 
-  user = new UserRegistration();
-  errorMessage!: string;
-
-  constructor(private registrationService: UsermanagementService, private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
-
-  registerUser() {
-    this.registrationService.registerUser(this.user).subscribe(
-      data => {
-        this.router.navigate(['/login'])
-      },
-      error => {
-        this.errorMessage="This username already exists.";
-      }
-    );
-  }
-
-  goToLoginPage() {
-    this.router.navigate(['/login'])
-  }
-
 }

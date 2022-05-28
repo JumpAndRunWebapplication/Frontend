@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-import {UsermanagementService} from "../service/usermanagement.service";
-import {UserRegistration} from "../model/user-registration";
 
 @Component({
   selector: 'app-page-main-menu',
